@@ -9,7 +9,6 @@
 #import "KMQErrorConfig.h"
 #import "GRMustache.h"
 
-NSString *const pList = @"plist";
 NSString *const ErrorNameCodeMapping = @"errorNameCodeMapping";
 
 @interface KMQErrorConfig () {
@@ -34,7 +33,7 @@ NSString *const ErrorNameCodeMapping = @"errorNameCodeMapping";
 
 - (void)checkAndDefaultConfig {
     NSAssert(self.defaultErrorDomain, @"Please set the default error domain.");
-    NSAssert(self.errorPListResourceName, @"Please specifiy the error plist which the errors will be read from.");
+    NSAssert(self.errorPListResourcePath, @"Please specifiy the error plist which the errors will be read from.");
     
     if (!self.defaultErrorMessageKey) {
         self.defaultErrorMessageKey = NSLocalizedRecoverySuggestionErrorKey;
@@ -51,8 +50,7 @@ NSString *const ErrorNameCodeMapping = @"errorNameCodeMapping";
 }
 
 - (void)loadErrorConfig {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:self.errorPListResourceName ofType:pList];
-    _errors = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    _errors = [NSDictionary dictionaryWithContentsOfFile:self.errorPListResourcePath];
     
     [_errors enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSAssert([obj isKindOfClass:[NSDictionary class]], @"Please maintain a two level dictionary structure according to error plist convention");

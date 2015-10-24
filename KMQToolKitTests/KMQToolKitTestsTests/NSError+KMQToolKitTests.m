@@ -8,6 +8,9 @@
 
 #import <XCTest/XCTest.h>
 #import <NSError+KMQToolKit.h>
+#import "NSError+KMQErrorCode.h"
+#import "NSError+KMQErrorDomain.h"
+#import <NSBundle+KMQToolKit.h>
 
 @interface NSError_KMQToolKitTests : XCTestCase
 
@@ -17,24 +20,34 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    [NSError setupToolKitWithDefaultErrorDomain:@"BlocQuery"
+                                     errorPList:[NSBundle plistPathForResource:@"errors" inBundleOfClass:[self class]]
+                                defaultErrorKey:@"recovery"
+                           fallbackErrorMessage:nil];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testResolveError {
+    NSError *error = [NSError errorForCode:kBlocQueryErrorEmailValidationFailed];
+    XCTAssertEqualObjects(KMQBlocQueryErrorDomain, error.domain);
+    XCTAssertEqual(kBlocQueryErrorEmailValidationFailed, error.code);
+    XCTAssertEqualObjects(@"Please provide a valid email address.", error.userInfo[@"recovery"]);
+    XCTAssertEqualObjects(@"Email does not pass regular expression test.", error.userInfo[@"reason"]);
+    XCTAssertEqualObjects(@"Email validation failed.", error.userInfo[@"description"]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testResolveErrorMessage {
+    XCTAssertEqualObjects(@"Please provide a valid email address.",
+                          [NSError messageForCode:kBlocQueryErrorEmailValidationFailed]);
+}
+
+- (void)testResolveErrorWithDomainAndContext {
+    XCTAssertEqualObjects(@"Oops! We did not find your account. Please make sure email and password are correct.",
+                          [NSError messageForDomain:KMQParseErrorDomain code:101 context:@"login"]);
 }
 
 @end

@@ -11,5 +11,8 @@
 
 #import "NSError+KMQToolKit.h"
 #import "KMQValidationBootstrap.h"
+#import "NSBundle+KMQToolKit.h"
+
+#define PLIST @"plist"
 
 #endif /* KMQToolKit_h */

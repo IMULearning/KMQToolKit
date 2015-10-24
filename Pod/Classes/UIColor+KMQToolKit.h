@@ -10,7 +10,7 @@
 
 @interface UIColor (KMQToolKit)
 
-+ (void)setupColorPalleteWithContentsOfFile:(NSString *)plistName keyInFile:(NSString *)key;
++ (void)setupColorPalleteWithContentsOfFile:(NSString *)filePath keyInFile:(NSString *)key;
 
 + (UIColor *)hexColor:(NSString *)hexStr alpha:(CGFloat)alpha;
 

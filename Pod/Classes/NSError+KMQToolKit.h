@@ -16,7 +16,7 @@
 // Convenience method to setup |KMQErrorConfig| and load the configuration according to the setup
 // Suggested to setup in |AppDelegate|
 + (void) setupToolKitWithDefaultErrorDomain:(NSString * _Nonnull)defaultDomain
-                                 errorPList:(NSString * _Nonnull)errorPListName
+                                 errorPList:(NSString * _Nonnull)errorPListResourcePath
                             defaultErrorKey:(NSString * _Nullable)defaultErrorKey
                        fallbackErrorMessage:(NSString * _Nullable)fallbackErrorMessage;
 

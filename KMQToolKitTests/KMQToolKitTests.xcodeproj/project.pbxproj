@@ -14,6 +14,11 @@
 		9AD482BA1BDBEDED0053A83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482B91BDBEDED0053A83F /* Assets.xcassets */; };
 		9AD482BD1BDBEDED0053A83F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482BB1BDBEDED0053A83F /* LaunchScreen.storyboard */; };
 		9AD482D31BDBEF810053A83F /* NSError+KMQToolKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482D21BDBEF810053A83F /* NSError+KMQToolKitTests.m */; settings = {ASSET_TAGS = (); }; };
+		9AD482D51BDBEFEA0053A83F /* errors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482D41BDBEFEA0053A83F /* errors.plist */; settings = {ASSET_TAGS = (); }; };
+		9AD482DC1BDBF0A80053A83F /* NSError+KMQErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482D91BDBF0A80053A83F /* NSError+KMQErrorCode.m */; settings = {ASSET_TAGS = (); }; };
+		9AD482DD1BDBF0A80053A83F /* NSError+KMQErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482DB1BDBF0A80053A83F /* NSError+KMQErrorDomain.m */; settings = {ASSET_TAGS = (); }; };
+		9AD482E11BDC10820053A83F /* UIColor+KMQToolKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482E01BDC10820053A83F /* UIColor+KMQToolKitTests.m */; settings = {ASSET_TAGS = (); }; };
+		9AD482E31BDC10BA0053A83F /* colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482E21BDC10BA0053A83F /* colors.plist */; settings = {ASSET_TAGS = (); }; };
 		A91064F343030DA2CD1B60CD /* libPods-KMQToolKitTestsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 915EBBD298058B4E85E8FECD /* libPods-KMQToolKitTestsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +48,13 @@
 		9AD482C31BDBEDEE0053A83F /* KMQToolKitTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMQToolKitTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD482C91BDBEDEE0053A83F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD482D21BDBEF810053A83F /* NSError+KMQToolKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+KMQToolKitTests.m"; sourceTree = "<group>"; };
+		9AD482D41BDBEFEA0053A83F /* errors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errors.plist; sourceTree = "<group>"; };
+		9AD482D81BDBF0A80053A83F /* NSError+KMQErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+KMQErrorCode.h"; sourceTree = "<group>"; };
+		9AD482D91BDBF0A80053A83F /* NSError+KMQErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+KMQErrorCode.m"; sourceTree = "<group>"; };
+		9AD482DA1BDBF0A80053A83F /* NSError+KMQErrorDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+KMQErrorDomain.h"; sourceTree = "<group>"; };
+		9AD482DB1BDBF0A80053A83F /* NSError+KMQErrorDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+KMQErrorDomain.m"; sourceTree = "<group>"; };
+		9AD482E01BDC10820053A83F /* UIColor+KMQToolKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KMQToolKitTests.m"; sourceTree = "<group>"; };
+		9AD482E21BDC10BA0053A83F /* colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colors.plist; sourceTree = "<group>"; };
 		A65D14730581E86B06366530 /* Pods-KMQToolKitTestsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMQToolKitTestsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMQToolKitTestsTests/Pods-KMQToolKitTestsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,10 +124,41 @@
 		9AD482C61BDBEDEE0053A83F /* KMQToolKitTestsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9AD482DF1BDBF0B50053A83F /* Generated */,
+				9AD482D71BDBEFF80053A83F /* Tests */,
+				9AD482D61BDBEFEE0053A83F /* Resource */,
 				9AD482C91BDBEDEE0053A83F /* Info.plist */,
-				9AD482D21BDBEF810053A83F /* NSError+KMQToolKitTests.m */,
 			);
 			path = KMQToolKitTestsTests;
+			sourceTree = "<group>";
+		};
+		9AD482D61BDBEFEE0053A83F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9AD482D41BDBEFEA0053A83F /* errors.plist */,
+				9AD482E21BDC10BA0053A83F /* colors.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		9AD482D71BDBEFF80053A83F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9AD482D21BDBEF810053A83F /* NSError+KMQToolKitTests.m */,
+				9AD482E01BDC10820053A83F /* UIColor+KMQToolKitTests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		9AD482DF1BDBF0B50053A83F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				9AD482D81BDBF0A80053A83F /* NSError+KMQErrorCode.h */,
+				9AD482D91BDBF0A80053A83F /* NSError+KMQErrorCode.m */,
+				9AD482DA1BDBF0A80053A83F /* NSError+KMQErrorDomain.h */,
+				9AD482DB1BDBF0A80053A83F /* NSError+KMQErrorDomain.m */,
+			);
+			name = Generated;
 			sourceTree = "<group>";
 		};
 		9DD89E7DB449ECE3856625F1 /* Pods */ = {
@@ -230,6 +273,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD482E31BDC10BA0053A83F /* colors.plist in Resources */,
+				9AD482D51BDBEFEA0053A83F /* errors.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +344,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD482D31BDBEF810053A83F /* NSError+KMQToolKitTests.m in Sources */,
+				9AD482DD1BDBF0A80053A83F /* NSError+KMQErrorDomain.m in Sources */,
+				9AD482E11BDC10820053A83F /* UIColor+KMQToolKitTests.m in Sources */,
+				9AD482DC1BDBF0A80053A83F /* NSError+KMQErrorCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

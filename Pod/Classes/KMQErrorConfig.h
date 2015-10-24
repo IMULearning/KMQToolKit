@@ -12,7 +12,7 @@
 @interface KMQErrorConfig : NSObject
 
 @property (nonatomic, strong) NSString *defaultErrorDomain;
-@property (nonatomic, strong) NSString *errorPListResourceName;
+@property (nonatomic, strong) NSString *errorPListResourcePath;
 @property (nonatomic, strong) NSString *defaultErrorMessageKey;
 @property (nonatomic, strong) NSString *fallbackErrorMessage;
 

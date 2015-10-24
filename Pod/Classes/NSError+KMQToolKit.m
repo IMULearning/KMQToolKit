@@ -15,11 +15,11 @@
 #pragma mark - Init
 
 + (void) setupToolKitWithDefaultErrorDomain:(NSString * _Nonnull)defaultDomain
-                                 errorPList:(NSString * _Nonnull)errorPListName
+                                 errorPList:(NSString * _Nonnull)errorPListResourcePath
                             defaultErrorKey:(NSString * _Nullable)defaultErrorKey
                        fallbackErrorMessage:(NSString * _Nullable)fallbackErrorMessage {
     [KMQErrorConfig config].defaultErrorDomain = defaultDomain;
-    [KMQErrorConfig config].errorPListResourceName = errorPListName;
+    [KMQErrorConfig config].errorPListResourcePath = errorPListResourcePath;
     [KMQErrorConfig config].defaultErrorMessageKey = defaultErrorKey;
     [KMQErrorConfig config].fallbackErrorMessage = fallbackErrorMessage;
     

@@ -10,12 +10,10 @@
 #import "NSDictionary+KMQToolKit.h"
 #import "KMQColorPalette.h"
 
-NSString *const pList = @"plist";
 
 @implementation UIColor (KMQToolKit)
 
-+ (void)setupColorPalleteWithContentsOfFile:(NSString *)plistName keyInFile:(NSString *)key {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:plistName ofType:pList];
++ (void)setupColorPalleteWithContentsOfFile:(NSString *)filePath keyInFile:(NSString *)key {
     NSDictionary *colors = [[NSDictionary dictionaryWithContentsOfFile:filePath] objectForTransitiveKey:key delimiter:@"."];
     [colors enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSAssert([obj isKindOfClass:[NSString class]] || [obj isKindOfClass:[NSDictionary class]], @"Each elements should either by string or dictionary");
