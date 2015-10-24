@@ -10,5 +10,6 @@
 #define KMQToolKit_h
 
 #import "NSError+KMQToolKit.h"
+#import "KMQValidationBootstrap.h"
 
 #endif /* KMQToolKit_h */
