@@ -1,0 +1,20 @@
+PODS:
+  - GRMustache (7.3.2):
+    - JRSwizzle (~> 1.0)
+  - JRSwizzle (1.0)
+  - KMQToolKit (0.1.0):
+    - GRMustache (~> 7.3.2)
+
+DEPENDENCIES:
+  - KMQToolKit (from `../`)
+
+EXTERNAL SOURCES:
+  KMQToolKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
+  KMQToolKit: c7310328b8464e729b64e1e6cf1cf8075106ec0c
+
+COCOAPODS: 0.39.0

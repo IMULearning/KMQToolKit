@@ -7,6 +7,6 @@ end
 
 target 'KMQToolKit_Tests', :exclusive => true do
   pod "KMQToolKit", :path => "../"
-
-  
 end
+
+link_with 'KMQToolKit_Example', 'KMQToolKit_Tests'

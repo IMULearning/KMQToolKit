@@ -14,8 +14,6 @@
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		98387F1F3D68BF175ED645EF /* Pods_KMQToolKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774766F4A16BE747AE7253D6 /* Pods_KMQToolKit_Tests.framework */; };
 		9ABAFE9A1BDB346900C043FC /* KMQToolKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABAFE991BDB346900C043FC /* KMQToolKit.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +26,13 @@
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = KMQToolKit;
 		};
+		9AD482951BDBED900053A83F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AD4827B1BDBED900053A83F;
+			remoteInfo = KMQToolKitTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +43,6 @@
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6003F5AE195388D20070C39A /* KMQToolKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMQToolKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		68243C090ED0CA907D83E582 /* KMQToolKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KMQToolKit.podspec; path = ../KMQToolKit.podspec; sourceTree = "<group>"; };
 		774766F4A16BE747AE7253D6 /* Pods_KMQToolKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMQToolKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA6DD3C9D51FC806BF4AA87 /* Pods-KMQToolKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMQToolKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMQToolKit_Tests/Pods-KMQToolKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +51,8 @@
 		95AEEE7F6FE40D795E24AC11 /* Pods-KMQToolKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMQToolKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMQToolKit_Example/Pods-KMQToolKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9ABAFE971BDB343300C043FC /* KMQToolKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KMQToolKit.framework; path = "Pods/../build/Debug-iphoneos/KMQToolKit.framework"; sourceTree = "<group>"; };
 		9ABAFE991BDB346900C043FC /* KMQToolKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KMQToolKit.framework; path = "Pods/../build/Debug-iphoneos/KMQToolKit.framework"; sourceTree = "<group>"; };
+		9AD4827C1BDBED900053A83F /* KMQToolKitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMQToolKitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD482941BDBED900053A83F /* KMQToolKitTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMQToolKitTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9D29E0AF7956D3675E6EEE /* Pods-KMQToolKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMQToolKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMQToolKit_Tests/Pods-KMQToolKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CE67D07C2C0F337EAB758DFB /* Pods-KMQToolKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMQToolKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMQToolKit_Example/Pods-KMQToolKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +81,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9AD482791BDBED900053A83F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD482911BDBED900053A83F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				1049891D5E924E1108875C36 /* Pods */,
@@ -108,6 +124,8 @@
 			children = (
 				6003F58A195388D20070C39A /* KMQToolKit_Example.app */,
 				6003F5AE195388D20070C39A /* KMQToolKit_Tests.xctest */,
+				9AD4827C1BDBED900053A83F /* KMQToolKitTests.app */,
+				9AD482941BDBED900053A83F /* KMQToolKitTestsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,25 +143,6 @@
 				774766F4A16BE747AE7253D6 /* Pods_KMQToolKit_Tests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
@@ -200,6 +199,41 @@
 			productReference = 6003F5AE195388D20070C39A /* KMQToolKit_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9AD4827B1BDBED900053A83F /* KMQToolKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AD4829F1BDBED900053A83F /* Build configuration list for PBXNativeTarget "KMQToolKitTests" */;
+			buildPhases = (
+				9AD482781BDBED900053A83F /* Sources */,
+				9AD482791BDBED900053A83F /* Frameworks */,
+				9AD4827A1BDBED900053A83F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMQToolKitTests;
+			productName = KMQToolKitTests;
+			productReference = 9AD4827C1BDBED900053A83F /* KMQToolKitTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9AD482931BDBED900053A83F /* KMQToolKitTestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AD482A01BDBED900053A83F /* Build configuration list for PBXNativeTarget "KMQToolKitTestsTests" */;
+			buildPhases = (
+				9AD482901BDBED900053A83F /* Sources */,
+				9AD482911BDBED900053A83F /* Frameworks */,
+				9AD482921BDBED900053A83F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AD482961BDBED900053A83F /* PBXTargetDependency */,
+			);
+			name = KMQToolKitTestsTests;
+			productName = KMQToolKitTestsTests;
+			productReference = 9AD482941BDBED900053A83F /* KMQToolKitTestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +246,15 @@
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					9AD4827B1BDBED900053A83F = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 6BQ5V93PEG;
+					};
+					9AD482931BDBED900053A83F = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 6BQ5V93PEG;
+						TestTargetID = 9AD4827B1BDBED900053A83F;
 					};
 				};
 			};
@@ -230,6 +273,8 @@
 			targets = (
 				6003F589195388D20070C39A /* KMQToolKit_Example */,
 				6003F5AD195388D20070C39A /* KMQToolKit_Tests */,
+				9AD4827B1BDBED900053A83F /* KMQToolKitTests */,
+				9AD482931BDBED900053A83F /* KMQToolKitTestsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,7 +291,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD4827A1BDBED900053A83F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD482921BDBED900053A83F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +415,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD482781BDBED900053A83F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AD482901BDBED900053A83F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,18 +440,12 @@
 			target = 6003F589195388D20070C39A /* KMQToolKit_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
 		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
+		9AD482961BDBED900053A83F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AD4827B1BDBED900053A83F /* KMQToolKitTests */;
+			targetProxy = 9AD482951BDBED900053A83F /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6003F5BD195388D20070C39A /* Debug */ = {
@@ -535,6 +600,80 @@
 			};
 			name = Release;
 		};
+		9AD4829B1BDBED900053A83F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = KMQToolKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kumiq.KMQToolKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9AD4829C1BDBED900053A83F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = KMQToolKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kumiq.KMQToolKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9AD4829D1BDBED900053A83F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = KMQToolKitTestsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kumiq.KMQToolKitTestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMQToolKitTests.app/KMQToolKitTests";
+			};
+			name = Debug;
+		};
+		9AD4829E1BDBED900053A83F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = KMQToolKitTestsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kumiq.KMQToolKitTestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMQToolKitTests.app/KMQToolKitTests";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,6 +703,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9AD4829F1BDBED900053A83F /* Build configuration list for PBXNativeTarget "KMQToolKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AD4829B1BDBED900053A83F /* Debug */,
+				9AD4829C1BDBED900053A83F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9AD482A01BDBED900053A83F /* Build configuration list for PBXNativeTarget "KMQToolKitTestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AD4829D1BDBED900053A83F /* Debug */,
+				9AD4829E1BDBED900053A83F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
