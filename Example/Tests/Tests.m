@@ -8,6 +8,8 @@
 
 @import XCTest;
 
+#import "KMQErrorConfig.h"
+
 @interface Tests : XCTestCase
 
 @end
