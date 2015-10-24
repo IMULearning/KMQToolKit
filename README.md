@@ -5,6 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/KMQToolKit.svg?style=flat)](http://cocoapods.org/pods/KMQToolKit)
 [![Platform](https://img.shields.io/cocoapods/p/KMQToolKit.svg?style=flat)](http://cocoapods.org/pods/KMQToolKit)
 
+## Tools
+
+### NSError+KMQToolKit
+
+Convention over configuration way to define error codes and user info messages in plist file. On setup, the configuration will be read and error codes can be automatically resolved to error messages.
+
+Detail TBD.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -13,7 +21,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-KMQToolKit is available through [CocoaPods](http://cocoapods.org). To install
+KMQToolKit **WILL BE** available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
