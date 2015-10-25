@@ -11,6 +11,7 @@
 @interface NSDictionary (KMQToolKit)
 
 // Allows access to several levels down for the dictionary
+- (id) objectForTransitiveKey:(NSString *)key;
 - (id) objectForTransitiveKey:(NSString *)key delimiter:(NSString *)delimiter;
 
 @end
