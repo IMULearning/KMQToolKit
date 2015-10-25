@@ -11,6 +11,16 @@
 @implementation UIViewController (KMQToolKit)
 
 #pragma mark -
+#pragma mark - Init
+
++ (__kindof UIViewController * _Nullable) controllerWithIdentifier:(NSString * _Nonnull)identifier
+                                            fromStoryboardWithName:(NSString * _Nonnull)storyboardName
+                                                          inBundle:(NSBundle * _Nullable)bundle {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:bundle];
+    return [storyboard instantiateViewControllerWithIdentifier:identifier];
+}
+
+#pragma mark -
 #pragma mark - View controller composition
 
 - (void)addToParentController:(UIViewController * _Nonnull)parentViewController inView:(UIView * _Nonnull)view {

@@ -9,8 +9,10 @@
 #ifndef KMQValidationBootstrap_h
 #define KMQValidationBootstrap_h
 
-#import "KMQNSStringValidator.h"
+#import "KMQValidationConstants.h"
 #import "KMQValidatorRegistry.h"
+
+#import "KMQNSStringValidator.h"
 #import "KMQNSStringValidator.h"
 #import "KMQEmailValidator.h"
 #import "KMQNSNumberValidator.h"
