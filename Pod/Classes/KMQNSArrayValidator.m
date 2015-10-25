@@ -7,6 +7,7 @@
 //
 
 #import "KMQNSArrayValidator.h"
+#import "NSArray+KMQToolKit.h"
 
 @implementation KMQNSArrayValidator
 
@@ -31,25 +32,42 @@
 }
 
 - (BOOL)isValid:(id)object errors:(NSArray *__autoreleasing *)errors {
-    NSAssert([object isKindOfClass:[NSArray class]], @"This validator can only deal with NSArray");
+    NSAssert(object == nil || [object isKindOfClass:[NSArray class]], @"This validator can only deal with NSArray");
     NSArray *array = object;
     NSMutableArray *localErrors = [NSMutableArray array];
-    NSMutableDictionary *userInfo = [@{@"array": array} mutableCopy];
+    NSMutableDictionary *userInfo = [@{@"array": array == nil ? [NSNull null] : array} mutableCopy];
     
     if (![self passNullTest:array]) {
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorArrayIsNull userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMinSizeTest:array]) {
         [userInfo setObject:@(self.minSize) forKey:KMQValidationArrayMinSizeKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorArrayTooSmall userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMaxSizeTest:array]) {
         [userInfo setObject:@(self.maxSize) forKey:KMQValidationArrayMaxSizeKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorArrayTooBig userInfo:userInfo]];
+        *errors = localErrors;
+        return NO;
+    }
+    
+    if (![self passMandatoryElementTest:array]) {
+        [userInfo setObject:self.mandatoryElements forKey:KMQValidationArrayMandatoryElementsKey];
+        [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorArrayMissingMandatoryElement userInfo:userInfo]];
+        *errors = localErrors;
+        return NO;
+    }
+    
+    if (![self passDisallowedElementTest:array]) {
+        [userInfo setObject:self.disallowedElements forKey:KMQValidationArrayDisallowedElementsKey];
+        [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorArrayContainsDisallowedKey userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
@@ -72,19 +90,11 @@
 }
 
 - (BOOL)passMandatoryElementTest:(NSArray *)array {
-    for (id obj in array) {
-        if (![array containsObject:obj])
-            return NO;
-    }
-    return YES;
+    return self.mandatoryElements == nil ? YES : [self.mandatoryElements isSubArrayOf:array];
 }
 
 - (BOOL)passDisallowedElementTest:(NSArray *)array {
-    for (id obj in array) {
-        if ([array containsObject:obj])
-            return NO;
-    }
-    return YES;
+    return self.disallowedElements == nil ? YES : ![self.disallowedElements intersects:array];
 }
 
 @end

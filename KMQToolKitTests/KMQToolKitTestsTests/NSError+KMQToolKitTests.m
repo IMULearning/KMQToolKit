@@ -50,4 +50,17 @@
                           [NSError messageForDomain:KMQParseErrorDomain code:101 context:@"login"]);
 }
 
+- (void)testResolveErrorWithParameter {
+    NSError *error = [NSError errorForCode:kBlocQueryErrorTextInsufficientLength
+                                   context:nil
+                                parameters:@{@"count": @(5)}];
+    XCTAssertEqualObjects(@"Please provide a question of at least 5 characters.", [error defaultErrorMessage]);
+}
+
+- (void)testResolveErrorFromError {
+    NSError *originalError = [NSError errorWithDomain:KMQParseErrorDomain code:200 userInfo:nil];
+    NSError *error = [NSError errorFromError:originalError];
+    XCTAssertEqualObjects(@"Please provide a username.", [error defaultErrorMessage]);
+}
+
 @end

@@ -25,6 +25,8 @@ extern NSString *const KMQValidationNumberMaxKey;
 // UserInfo keys - Array
 extern NSString *const KMQValidationArrayMinSizeKey;
 extern NSString *const KMQValidationArrayMaxSizeKey;
+extern NSString *const KMQValidationArrayMandatoryElementsKey;
+extern NSString *const KMQValidationArrayDisallowedElementsKey;
 
 // UserInfo keys - Dictionary
 extern NSString *const KMQValidationDictionaryMinSizeKey;
@@ -49,12 +51,14 @@ typedef NS_ENUM(NSInteger, KMQValidationErrorCode) {
     kKMQValidationErrorArrayIsNull = 9,
     kKMQValidationErrorArrayTooSmall = 10,
     kKMQValidationErrorArrayTooBig = 11,
+    kKMQValidationErrorArrayMissingMandatoryElement = 12,
+    kKMQValidationErrorArrayContainsDisallowedKey = 13,
     
-    kKMQValidationErrorDictionaryIsNull = 12,
-    kKMQValidationErrorDictionaryTooSmall = 13,
-    kKMQValidationErrorDictionaryTooBig = 14,
-    kKMQValidationErrorDictionaryMissingMandatoryKey = 15,
-    kKMQValidationErrorDictionaryContainsDisallowedKey = 16,
+    kKMQValidationErrorDictionaryIsNull = 14,
+    kKMQValidationErrorDictionaryTooSmall = 15,
+    kKMQValidationErrorDictionaryTooBig = 16,
+    kKMQValidationErrorDictionaryMissingMandatoryKey = 17,
+    kKMQValidationErrorDictionaryContainsDisallowedKey = 18,
 };
 
 // Other constants

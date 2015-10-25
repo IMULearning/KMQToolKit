@@ -7,6 +7,7 @@
 //
 
 #import "KMQNSDictionaryValidator.h"
+#import "NSArray+KMQToolKit.h"
 
 @implementation KMQNSDictionaryValidator
 
@@ -30,37 +31,42 @@
 }
 
 - (BOOL)isValid:(id)object errors:(NSArray *__autoreleasing *)errors {
-    NSAssert([object isKindOfClass:[NSDictionary class]], @"This validator can only deal with NSDictionary");
+    NSAssert(object == nil || [object isKindOfClass:[NSDictionary class]], @"This validator can only deal with NSDictionary");
     NSDictionary *dict = object;
     NSMutableArray *localErrors = [NSMutableArray array];
-    NSMutableDictionary *userInfo = [@{@"dictionary": dict} mutableCopy];
+    NSMutableDictionary *userInfo = [@{@"dictionary": dict == nil ? [NSNull null] : dict} mutableCopy];
     
     if (![self passNullTest:dict]) {
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorDictionaryIsNull userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMinSizeTest:dict]) {
         [userInfo setObject:@(self.minSize) forKey:KMQValidationDictionaryMinSizeKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorDictionaryTooSmall userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMaxSizeTest:dict]) {
         [userInfo setObject:@(self.maxSize) forKey:KMQValidationDictionaryMaxSizeKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorDictionaryTooBig userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMandatoryKeyTest:dict]) {
         [userInfo setObject:self.mandatoryKeys forKey:KMQValidationDictionaryMandatoryKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorDictionaryMissingMandatoryKey userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passDisallowedKeyTest:dict]) {
         [userInfo setObject:self.disallowedKeys forKey:KMQValidationDictionaryDisallowedKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorDictionaryContainsDisallowedKey userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
@@ -83,19 +89,11 @@
 }
 
 - (BOOL)passMandatoryKeyTest:(NSDictionary *)dict {
-    for (NSString *key in dict) {
-        if (!dict[key])
-            return NO;
-    }
-    return YES;
+    return self.mandatoryKeys == nil ? YES : [self.mandatoryKeys isSubArrayOf:dict.allKeys];
 }
 
 - (BOOL)passDisallowedKeyTest:(NSDictionary *)dict {
-    for (NSString *key in dict) {
-        if (dict[key])
-            return NO;
-    }
-    return YES;
+    return self.disallowedKeys == nil ? YES : ![self.disallowedKeys intersects:dict.allKeys];
 }
 
 @end

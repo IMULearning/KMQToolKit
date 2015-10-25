@@ -11,5 +11,11 @@
 
 #import "KMQNSStringValidator.h"
 #import "KMQValidatorRegistry.h"
+#import "KMQNSStringValidator.h"
+#import "KMQEmailValidator.h"
+#import "KMQNSNumberValidator.h"
+#import "KMQNSArrayValidator.h"
+#import "KMQNSDictionaryValidator.h"
+
 
 #endif /* KMQValidationBootstrap_h */

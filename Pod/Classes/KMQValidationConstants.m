@@ -24,6 +24,8 @@ NSString *const KMQValidationNumberMaxKey = @"KMQValidationNumberMax";
 
 NSString *const KMQValidationArrayMinSizeKey = @"KMQValidationArrayMinSize";
 NSString *const KMQValidationArrayMaxSizeKey = @"KMQValidationArrayMaxSize";
+NSString *const KMQValidationArrayMandatoryElementsKey = @"KMQValidationArrayMandatoryElements";
+NSString *const KMQValidationArrayDisallowedElementsKey = @"KMQValidationArrayDisallowedElements";
 
 
 NSString *const KMQValidationDictionaryMinSizeKey = @"KMQValidationDictionaryMinSize";

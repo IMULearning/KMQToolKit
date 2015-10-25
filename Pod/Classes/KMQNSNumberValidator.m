@@ -22,20 +22,22 @@
 }
 
 - (BOOL)isValid:(id)object errors:(NSArray *__autoreleasing *)errors {
-    NSAssert([object isKindOfClass:[NSNumber class]], @"This validator can only deal with NSNumber");
+    NSAssert(object == nil || [object isKindOfClass:[NSNumber class]], @"This validator can only deal with NSNumber");
     NSNumber *number = object;
     NSMutableArray *localErrors = [NSMutableArray array];
-    NSMutableDictionary *userInfo = [@{@"number": number} mutableCopy];
+    NSMutableDictionary *userInfo = [@{@"number": number == nil ? [NSNull null] : number} mutableCopy];
     
     if (![self passMinTest:number]) {
         [userInfo setObject:self.min forKey:KMQValidationNumberMinKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorNumberToSmall userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMaxTest:number]) {
         [userInfo setObject:self.min forKey:KMQValidationNumberMaxKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorNumberToBig userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
@@ -43,11 +45,11 @@
 }
 
 - (BOOL)passMinTest:(NSNumber *)number {
-    return self.min == nil || [self.min compare:number] == NSOrderedSame || [self.min compare:number] == NSOrderedDescending;
+    return self.min == nil || [self.min compare:number] == NSOrderedSame || [self.min compare:number] == NSOrderedAscending;
 }
 
 - (BOOL)passMaxTest:(NSNumber *)number {
-    return self.max == nil || [self.max compare:number] == NSOrderedSame || [self.max compare:number] == NSOrderedAscending;
+    return self.max == nil || [self.max compare:number] == NSOrderedSame || [self.max compare:number] == NSOrderedDescending;
 }
 
 @end

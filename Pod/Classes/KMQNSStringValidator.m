@@ -50,10 +50,10 @@
 #pragma mark - Main method
 
 - (BOOL)isValid:(id)object errors:(NSArray *__autoreleasing *)errors {
-    NSAssert([object isKindOfClass:[NSString class]], @"This validator can only deal with NSString");
+    NSAssert(object == nil || [object isKindOfClass:[NSString class]], @"This validator can only deal with NSString");
     NSString *string = object;
     NSMutableArray *localErrors = [NSMutableArray array];
-    NSMutableDictionary *userInfo = [@{@"string": string} mutableCopy];
+    NSMutableDictionary *userInfo = [@{@"string": string == nil ? [NSNull null] : string} mutableCopy];
     
     if (self.trimBeforeValidation) {
         string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -61,41 +61,48 @@
     
     if (![self passNullTest:string]) {
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorStringIsNull userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passEmptyTest:string]) {
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorStringIsEmpty userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMinLengthTest:string]) {
         [userInfo setObject:@(self.minLength) forKey:KMQValidationStringMinLengthKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorStringTooShort userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passMaxLengthTest:string]) {
         [userInfo setObject:@(self.maxLength) forKey:KMQValidationStringMaxLengthKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorStringTooLong userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passDisallowedCharacterSetTest:string]) {
         [userInfo setObject:self.disallowedCharacterSet forKey:KMQValidationStringDisallowedCharsetKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorStringContainsDisallowedCharset userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passDisallowedSubstringTest:string]) {
         [userInfo setObject:self.disallowedSubStrings forKey:KMQValidationStringDisallowedSubStringKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorStringContainsDisallowedSubstring userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     
     if (![self passRegularExpressionTest:string]) {
         [userInfo setObject:self.regularExpression forKey:KMQValidationStringRegexKey];
         [localErrors addObject:[NSError errorWithDomain:KMQValidationErrorDomain code:kKMQValidationErrorStringRegexMismatch userInfo:userInfo]];
+        *errors = localErrors;
         return NO;
     }
     

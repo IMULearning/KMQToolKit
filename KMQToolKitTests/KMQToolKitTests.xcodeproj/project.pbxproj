@@ -19,6 +19,8 @@
 		9AD482DD1BDBF0A80053A83F /* NSError+KMQErrorDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482DB1BDBF0A80053A83F /* NSError+KMQErrorDomain.m */; settings = {ASSET_TAGS = (); }; };
 		9AD482E11BDC10820053A83F /* UIColor+KMQToolKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482E01BDC10820053A83F /* UIColor+KMQToolKitTests.m */; settings = {ASSET_TAGS = (); }; };
 		9AD482E31BDC10BA0053A83F /* colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482E21BDC10BA0053A83F /* colors.plist */; settings = {ASSET_TAGS = (); }; };
+		9AD482E91BDD37CB0053A83F /* KMQValidatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482E81BDD37CB0053A83F /* KMQValidatorTests.m */; settings = {ASSET_TAGS = (); }; };
+		9AD482EF1BDD4A9B0053A83F /* NSArray+KMQToolKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482EE1BDD4A9B0053A83F /* NSArray+KMQToolKitTests.m */; settings = {ASSET_TAGS = (); }; };
 		A91064F343030DA2CD1B60CD /* libPods-KMQToolKitTestsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 915EBBD298058B4E85E8FECD /* libPods-KMQToolKitTestsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		9AD482DB1BDBF0A80053A83F /* NSError+KMQErrorDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+KMQErrorDomain.m"; sourceTree = "<group>"; };
 		9AD482E01BDC10820053A83F /* UIColor+KMQToolKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KMQToolKitTests.m"; sourceTree = "<group>"; };
 		9AD482E21BDC10BA0053A83F /* colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colors.plist; sourceTree = "<group>"; };
+		9AD482E81BDD37CB0053A83F /* KMQValidatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMQValidatorTests.m; sourceTree = "<group>"; };
+		9AD482EE1BDD4A9B0053A83F /* NSArray+KMQToolKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KMQToolKitTests.m"; sourceTree = "<group>"; };
 		A65D14730581E86B06366530 /* Pods-KMQToolKitTestsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMQToolKitTestsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMQToolKitTestsTests/Pods-KMQToolKitTestsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,8 @@
 			children = (
 				9AD482D21BDBEF810053A83F /* NSError+KMQToolKitTests.m */,
 				9AD482E01BDC10820053A83F /* UIColor+KMQToolKitTests.m */,
+				9AD482E81BDD37CB0053A83F /* KMQValidatorTests.m */,
+				9AD482EE1BDD4A9B0053A83F /* NSArray+KMQToolKitTests.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -347,6 +353,8 @@
 				9AD482DD1BDBF0A80053A83F /* NSError+KMQErrorDomain.m in Sources */,
 				9AD482E11BDC10820053A83F /* UIColor+KMQToolKitTests.m in Sources */,
 				9AD482DC1BDBF0A80053A83F /* NSError+KMQErrorCode.m in Sources */,
+				9AD482E91BDD37CB0053A83F /* KMQValidatorTests.m in Sources */,
+				9AD482EF1BDD4A9B0053A83F /* NSArray+KMQToolKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
