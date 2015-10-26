@@ -7,10 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <NSError+KMQToolKit.h>
+#import <KMQToolKit/KMQToolKit.h>
 #import "NSError+KMQErrorCode.h"
 #import "NSError+KMQErrorDomain.h"
-#import <NSBundle+KMQToolKit.h>
 
 @interface NSError_KMQToolKitTests : XCTestCase
 
