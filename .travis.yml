@@ -11,5 +11,5 @@ language: objective-c
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
-- set -o pipefail && xcodebuild test -workspace Example/KMQToolKit.xcworkspace -scheme KMQToolKit-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-- pod lib lint --quick
+- set -o pipefail && xcodebuild test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+- pod lib lint --alllow-warnings --quick
