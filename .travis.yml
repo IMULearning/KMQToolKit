@@ -16,4 +16,4 @@ script:
 #- set -o pipefail && xcodebuild test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator9.0 ONLY_ACTIVE_ARCH=NO | xcpretty -c
 #- pod lib lint --allow-warnings --quick
 - xctool test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-- pod lib lint --only-errors --quick
+- pod lib lint --allow-warnings --quick

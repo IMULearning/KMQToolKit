@@ -8,5 +8,4 @@ end
 
 target 'KMQToolKitTestsTests' do
   pod "KMQToolKit", :path => "../"
-  pod "KMQToolKit"
 end
