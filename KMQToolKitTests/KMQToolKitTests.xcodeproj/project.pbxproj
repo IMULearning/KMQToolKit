@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A636A9C1BDDF861001AE571 /* NSError+KMQErrorCode.h in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482D81BDBF0A80053A83F /* NSError+KMQErrorCode.h */; };
+		9A636A9D1BDDF861001AE571 /* NSError+KMQErrorDomain.h in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482DA1BDBF0A80053A83F /* NSError+KMQErrorDomain.h */; };
 		9AD482AF1BDBEDED0053A83F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482AE1BDBEDED0053A83F /* main.m */; };
 		9AD482B21BDBEDED0053A83F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482B11BDBEDED0053A83F /* AppDelegate.m */; };
 		9AD482B51BDBEDED0053A83F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482B41BDBEDED0053A83F /* ViewController.m */; };
@@ -348,6 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A636A9C1BDDF861001AE571 /* NSError+KMQErrorCode.h in Sources */,
+				9A636A9D1BDDF861001AE571 /* NSError+KMQErrorDomain.h in Sources */,
 				9AD482D31BDBEF810053A83F /* NSError+KMQToolKitTests.m in Sources */,
 				9AD482DD1BDBF0A80053A83F /* NSError+KMQErrorDomain.m in Sources */,
 				9AD482E11BDC10820053A83F /* UIColor+KMQToolKitTests.m in Sources */,
