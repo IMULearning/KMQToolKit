@@ -1,6 +1,6 @@
 # KMQToolKit
 
-[![CI Status](http://img.shields.io/travis/Weinan Qiu/KMQToolKit.svg?style=flat)](https://travis-ci.org/Weinan Qiu/KMQToolKit)
+[![CI Status](https://travis-ci.org/davidiamyou/KMQToolKit.svg?branch=master)](https://travis-ci.org/davidiamyou/KMQToolKit)
 [![Version](https://img.shields.io/cocoapods/v/KMQToolKit.svg?style=flat)](http://cocoapods.org/pods/KMQToolKit)
 [![License](https://img.shields.io/cocoapods/l/KMQToolKit.svg?style=flat)](http://cocoapods.org/pods/KMQToolKit)
 [![Platform](https://img.shields.io/cocoapods/p/KMQToolKit.svg?style=flat)](http://cocoapods.org/pods/KMQToolKit)
@@ -19,12 +19,6 @@
   - [UIImagePickerController](https://github.com/davidiamyou/KMQToolKit/blob/development/Docs/UIImagePickerController.md)
   - [UIImageView](https://github.com/davidiamyou/KMQToolKit/blob/development/Docs/UIImageView.md)
   - [UIViewController](https://github.com/davidiamyou/KMQToolKit/blob/development/Docs/UIViewController.md)  
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
