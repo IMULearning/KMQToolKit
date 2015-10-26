@@ -15,6 +15,6 @@
 
 @property (nonatomic, strong) NSNumber * _Nonnull max;
 
-+ (id <KMQValidator>) valueBetweenMin:(NSNumber *)min max:(NSNumber *)max;
++ (id <KMQValidator> _Nonnull) valueBetweenMin:(NSNumber * _Nonnull)min max:(NSNumber * _Nonnull)max;
 
 @end
