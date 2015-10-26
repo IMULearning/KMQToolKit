@@ -7,6 +7,5 @@ target 'KMQToolKitTests' do
 end
 
 target 'KMQToolKitTestsTests' do
-#  pod "KMQToolKit", :path => "../"
-  pod "KMQToolKit"
+  pod "KMQToolKit", :path => "../"
 end
