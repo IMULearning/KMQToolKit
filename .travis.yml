@@ -3,6 +3,7 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: objective-c
+osx_image: xcode7
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
@@ -11,5 +12,5 @@ language: objective-c
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
-- set -o pipefail && xcodebuild test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator8.1 ONLY_ACTIVE_ARCH=NO | xcpretty -c
+- set -o pipefail && xcodebuild test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator9.0 ONLY_ACTIVE_ARCH=NO | xcpretty -c
 - pod lib lint --only-errors --quick
