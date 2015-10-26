@@ -42,6 +42,9 @@ With the addition of `NSBundle+KMQToolKit`, the code can be simplified to
 [UIColor setupColorPalleteWithContentsOfFile:[NSBundle plistPathForResource:@"colors"] keyInFile:@"colors"];
 ```
 
+The `keyInFile` identifies the key where the color dictionary is located in the plist file. It can be delimited by `.` if the dictionary
+is located several levels down.
+
 ### Plist format
 
 A color can either be defined as a simple hex string, which its alpha will be assumed to be `1.0` or `255` on a 0-255 scale. Or it can be a dictionary with `color` and `alpha` as keys. The `alpha` value will be between 0 and 255.
