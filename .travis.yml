@@ -3,16 +3,16 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: objective-c
+osx_image: xcode7
 podfile: KMQToolKitTests/Podfile
 # cache: cocoapods
-podfile: KMQToolKitTests/Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=KMQToolKitTests
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
-#- set -o pipefail && xcodebuild test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator9.0 ONLY_ACTIVE_ARCH=NO | xcpretty -c
-#- pod lib lint --allow-warnings --quick
-- xctool test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- set -o pipefail && xcodebuild test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator9.0 ONLY_ACTIVE_ARCH=NO | xcpretty -c
 - pod lib lint --allow-warnings --quick
+#- xctool test -workspace KMQToolKitTests/KMQToolKitTests.xcworkspace -scheme KMQToolKitTestsTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#- pod lib lint --allow-warnings --quick
