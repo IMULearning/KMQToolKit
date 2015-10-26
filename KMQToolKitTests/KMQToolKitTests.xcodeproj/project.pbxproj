@@ -12,7 +12,6 @@
 		9AD482B51BDBEDED0053A83F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482B41BDBEDED0053A83F /* ViewController.m */; };
 		9AD482B81BDBEDED0053A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482B61BDBEDED0053A83F /* Main.storyboard */; };
 		9AD482BA1BDBEDED0053A83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482B91BDBEDED0053A83F /* Assets.xcassets */; };
-		9AD482BD1BDBEDED0053A83F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482BB1BDBEDED0053A83F /* LaunchScreen.storyboard */; };
 		9AD482D31BDBEF810053A83F /* NSError+KMQToolKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482D21BDBEF810053A83F /* NSError+KMQToolKitTests.m */; settings = {ASSET_TAGS = (); }; };
 		9AD482D51BDBEFEA0053A83F /* errors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AD482D41BDBEFEA0053A83F /* errors.plist */; settings = {ASSET_TAGS = (); }; };
 		9AD482DC1BDBF0A80053A83F /* NSError+KMQErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD482D91BDBF0A80053A83F /* NSError+KMQErrorCode.m */; settings = {ASSET_TAGS = (); }; };
@@ -46,7 +45,6 @@
 		9AD482B41BDBEDED0053A83F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9AD482B71BDBEDED0053A83F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AD482B91BDBEDED0053A83F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9AD482BC1BDBEDED0053A83F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AD482BE1BDBEDED0053A83F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD482C31BDBEDEE0053A83F /* KMQToolKitTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMQToolKitTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD482C91BDBEDEE0053A83F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				9AD482B41BDBEDED0053A83F /* ViewController.m */,
 				9AD482B61BDBEDED0053A83F /* Main.storyboard */,
 				9AD482B91BDBEDED0053A83F /* Assets.xcassets */,
-				9AD482BB1BDBEDED0053A83F /* LaunchScreen.storyboard */,
 				9AD482BE1BDBEDED0053A83F /* Info.plist */,
 				9AD482AD1BDBEDED0053A83F /* Supporting Files */,
 			);
@@ -272,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD482BD1BDBEDED0053A83F /* LaunchScreen.storyboard in Resources */,
 				9AD482BA1BDBEDED0053A83F /* Assets.xcassets in Resources */,
 				9AD482B81BDBEDED0053A83F /* Main.storyboard in Resources */,
 			);
@@ -379,14 +375,6 @@
 				9AD482B71BDBEDED0053A83F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9AD482BB1BDBEDED0053A83F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9AD482BC1BDBEDED0053A83F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
