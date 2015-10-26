@@ -208,6 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AD482CF1BDBEDEE0053A83F /* Build configuration list for PBXNativeTarget "KMQToolKitTestsTests" */;
 			buildPhases = (
+				7428C9869CF7C8A972A08617 /* Check Pods Manifest.lock */,
 				9AD482BF1BDBEDEE0053A83F /* Sources */,
 				9AD482C01BDBEDEE0053A83F /* Frameworks */,
 				9AD482C11BDBEDEE0053A83F /* Resources */,
@@ -298,6 +299,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMQToolKitTestsTests/Pods-KMQToolKitTestsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7428C9869CF7C8A972A08617 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		93DCA8F25AE75B6988A41B6E /* Embed Pods Frameworks */ = {
