@@ -10,6 +10,7 @@
 
 @interface NSBundle (KMQToolKit)
 
-+ (NSString * _Nullable) plistPathForResource:(NSString *)resourceName inBundleOfClass:(Class _Nonnull)aClass;
++ (NSString * _Nullable) plistPathForResource:(NSString * _Nonnull)resourceName;
++ (NSString * _Nullable) plistPathForResource:(NSString * _Nonnull)resourceName inBundleOfClass:(Class _Nonnull)aClass;
 
 @end
